@@ -1,5 +1,4 @@
-
-
+// This makes the heart change its color and fill
 
 function changeShuffle(){
   let shuffleIconDot = document.getElementById("shuffleDot");
@@ -228,13 +227,11 @@ toast2.classList.toggle("toasted")
 document.addEventListener("DOMContentLoaded", function(){
     var btn = document.querySelector(".bi-heart");
     var element = document.getElementById("liveToast");
-
     btn.addEventListener("click", function(){        
         var myToast = bootstrap.Toast.getOrCreateInstance(element);
         // {_element: div#myToast.toast.fade.show, _config: {…}, _timeout: null, _hasMouseInteraction: false, _hasKeyboardInteraction: false}
     });
 });
-
 More about toasts:
 https://getbootstrap.com/docs/5.1/components/toasts/#hide
 https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-toasts.php
@@ -266,7 +263,6 @@ heart.addEventListener("click", function(){
 }
 }
 /*
-
 /*
 There problem here is that I am trying to attach an event to DOM content that does not exist
 var iconFill = document.querySelector(".bi-heart-fill")
@@ -275,7 +271,6 @@ let myToast2 = new bootstrap.Toast(element2);
 iconFill.addEventListener("click", function(){
         myToast2.show();
         });
-
 })
 */
 
@@ -330,10 +325,3 @@ function handleInputChange(e) {
 }
 
 audio.ontimeupdate = handleInputChange(musicTrack);
-
-
-
-
-
-
-

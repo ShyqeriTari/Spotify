@@ -342,6 +342,9 @@ cursor: pointer;
     white-space: nowrap;
     width: fit-content;
     min-width: 200px;
+    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .listen{
     width: fit-content;
@@ -409,6 +412,8 @@ cursor: pointer;
     font-weight: bold;
     color: var(--spotify-white);
     margin-bottom: 0;
+    max-width: 200px;
+    text-overflow: ellipsis;
     /* white-space: nowrap; */
 }
 .hello-card:hover{
@@ -1268,7 +1273,11 @@ width: 100%;
 
     background-attachment:scroll;
   }
-
+    .queen a {
+        color: var(--spotify-white);
+        opacity: 0.5;
+        text-decoration: none;
+    }
     .queen:hover{
         text-decoration: underline;
         cursor: pointer;
@@ -1419,4 +1428,3 @@ cursor: pointer;
         color: var(--spotify-white);
     
     }
-

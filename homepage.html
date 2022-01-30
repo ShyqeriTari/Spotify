@@ -9,14 +9,29 @@
 
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-  <script src="main.js" defer></script>
+  <!-- <script src="main.js" defer></script> -->
   <title>Spotify</title>
   <link rel="shortcut icon" href="/media/favicon.png" type="image/x-icon">
-  <script src="main.js" defer></script>
 
 </head>
 
 <body>
+    <div class="modal fade" id="albumModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="albumModalLabel">Song List</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save</button>
+      </div>
+    </div>
+  </div>
+    </div>
 
 
 
@@ -44,7 +59,7 @@
                   d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z" />
               </svg>
 
-              <p>Home</p>
+              <a href="#" style="text-decoration: none; color: inherit;">Home</a>
             </div>
 
             <div class="hover-effect d-flex ">
@@ -54,7 +69,7 @@
                   d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
               </svg>
 
-              <p>Search</p>
+              <a href="search.html" style="text-decoration: none; color: inherit;">Search</a>
             </div>
 
             <div class=" hover-effect d-flex ">
@@ -130,21 +145,7 @@
             <p class="side-p">Spotify Playlist</p>
             <p class="side-p">Spotify Playlist</p>
             <p class="side-p">Spotify Playlist Spotify Playlist</p>
-            <p class="side-p">Spotify Playlist Spotify Playlist</p>
-            <p class="side-p">Spotify Playlist</p>
-            <p class="side-p">Spotify Playlist Spotify Playlist</p>
-            <p class="side-p">Spotify Playlist</p>
-            <p class="side-p">Spotify Playlist Spotify Playlist</p>
-            <p class="side-p">Spotify Playlist</p>
-            <p class="side-p">Spotify Playlist Spotify Playlist</p>
-            <p class="side-p">Spotify Playlist</p>
-            <p class="side-p">Spotify Playlist</p>
-            <p class="side-p">Spotify Playlist</p>
-            <p class="side-p">Spotify Playlist Spotify Playlist</p>
-            <p class="side-p">Spotify Playlist</p>
-            <p class="side-p">Spotify Playlist Spotify Playlist</p>
-            <p class="side-p">Spotify Playlist</p>
-            <p class="side-p">Spotify Playlist</p>
+
           </div>
           <button class="install d-flex">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -204,23 +205,27 @@
                       <a class="nav-link text-center position-relative" href="/artist.html"><i class="bi bi-chevron-right" ></i></a>
                     </li>
                   </ul>
+
+                
                   
                         <div class="dropdown">
                             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
                                 aria-expanded="false">
-                                <img src="/media/profile-picture.jpg" style="width: 20px">
-                                <span class="text-truncate">Miss Beaver</span>
+                                <img src="/media/maneskin-cover.jpg" style="width: 20px">
+                                <span class="text-truncate">Spotify</span>
                             </button>
                             <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="dropdownMenuButton">
                               <li><a class="dropdown-item" href="login.html">Account <span><i class="bi bi-box-arrow-up-right"></i></span></a></li>
                               <li><a class="dropdown-item" href="#">Profile</a></li>
                               <li><a class="dropdown-item" href="finish.html">Log-out</a></li>
+                              <li><a class="dropdown-item effect" type="button" href="#" data-bs-toggle="modal" data-bs-target="#albumModal">Song List</a></li>
+                              <li><a class="dropdown-item effect" type="button" href="#" onclick="countUnique()">Unique</a></li>
                             </ul>
         
                         </div>
             </nav>
-            <!-- good morning time js
-            hover play button transition js,, gradient-->
+
+
 
         </div>
 
@@ -251,90 +256,90 @@
                 <div class="hello-content">
 
                     <div class="hello-card d-flex rounded">
-                        <img class="img-fluid rounded-start" src="/media/doors-media/album_6.png" alt="the doors album" style="width: 40%;">
+                        <img class="img-fluid rounded-start" src="/media/doors-media/album_6.png" alt="the doors album">
                         <div class="hello-card-content d-flex align-items-center w-100">
-                            <p class="bandTitle">The Doors</p>
+                            <p>The Doors</p>
                             <div class="card-play-btn hello-play-btn">
                                 <div class="play-btn-icon"></div>
                             </div>
                         </div>
                     </div>
                     <div class="hello-card d-flex rounded">
-                        <img class="img-fluid rounded-start" src="/media/homepage/artist_5.jpg" alt="the beatles" style="width: 40%;">
+                        <img class="img-fluid rounded-start" src="/media/homepage/artist_5.jpg" alt="the beatles">
                         <div class="hello-card-content d-flex align-items-center w-100">
-                            <p class="bandTitle">The Beatles</p>
+                            <p>The Beatles</p>
                                 <div class="card-play-btn hello-play-btn">
                                 <div class="play-btn-icon"></div>
                             </div>
                         </div>
                     </div>
                     <div class="hello-card d-flex rounded">
-                        <img class="img-fluid rounded-start" src="/media/homepage/artist_3.png" alt="tuto culugno" style="width: 40%;">
+                        <img class="img-fluid rounded-start" src="/media/homepage/artist_3.png" alt="tuto culugno">
                         <div class="hello-card-content d-flex align-items-center w-100">
-                            <p class="bandTitle">Tuto Culugno</p>
+                            <p>Tuto Culugno</p>
                             <div class="card-play-btn hello-play-btn">
                                 <div class="play-btn-icon"></div>
                             </div>
                         </div>
                     </div>
                     <div class="hello-card d-flex rounded">
-                        <img class="img-fluid rounded-start" src="/media/homepage/liked.png" alt="liked" style="width: 40%;">
+                        <img class="img-fluid rounded-start" src="/media/homepage/liked.png" alt="liked">
                         <div class="hello-card-content d-flex align-items-center w-100">
-                            <p class="bandTitle">Liked Songs</p>
+                            <p>Liked Songs</p>
                                 <div class="card-play-btn hello-play-btn">
                                 <div class="play-btn-icon"></div>
                             </div>
                         </div>
                     </div>
-                    <div class="hello-card d-flex rounded" id="playcard">
-                        <img class="img-fluid rounded-start" src="/media/homepage/artist_1.jpg" alt="max richter" style="width: 40%;">
+                    <div class="hello-card d-flex rounded">
+                        <img class="img-fluid rounded-start" src="/media/homepage/artist_1.jpg" alt="max richter">
                         <div class="hello-card-content d-flex align-items-center w-100">
-                            <p class="bandTitle">Max Richter</p>
+                            <p>Max Richter</p>
                             <div class="card-play-btn hello-play-btn">
                                 <div class="play-btn-icon"></div>
                             </div>
                         </div>
                     </div>
                     <div class="hello-card d-none d-xl-flex rounded">
-                        <img class="img-fluid rounded-start" src="/media/homepage/artist_12.png" alt="playlist" style="width: 40%;">
+                        <img class="img-fluid rounded-start" src="/media/homepage/artist_12.png" alt="playlist">
                         <div class="hello-card-content d-flex align-items-center w-100">
-                            <p class="bandTitle">Centralka</p>
+                            <p>Centralka</p>
                                 <div class="card-play-btn hello-play-btn">
                                 <div class="play-btn-icon"></div>
                             </div>
                         </div>
                     </div>
                     <div class="hello-card d-none d-xxl-flex rounded">
-                        <img class="img-fluid rounded-start" src="/media/homepage/artist_11.png" alt="marco ferradini" style="width: 40%;">
+                        <img class="img-fluid rounded-start" src="/media/homepage/artist_11.png" alt="marco ferradini">
                         <div class="hello-card-content d-flex align-items-center w-100">
-                            <p class="bandTitle">Marco Ferradini</p>
+                            <p>Marco Ferradini</p>
                                 <div class="card-play-btn hello-play-btn">
                                 <div class="play-btn-icon"></div>
                             </div>
                         </div>
                     </div>
                     <div class="hello-card d-flex rounded">
-                        <img class="img-fluid rounded-start" src="/media/homepage/daily_1.png" alt="daily mix 1" style="width: 40%;">
+                        <img class="img-fluid rounded-start" src="/media/homepage/daily_1.png" alt="daily mix 1">
                         <div class="hello-card-content d-flex align-items-center w-100">
-                            <p class="bandTitle">Daily Mix 1</p>
+                            <p>Daily Mix 1</p>
                                 <div class="card-play-btn hello-play-btn">
                                 <div class="play-btn-icon"></div>
                             </div>
                         </div>
                     </div>
-                    <div class="hello-card d-none d-xl-flex rounded" id="playcard">
-                        <img class="img-fluid rounded-start" src="/media/homepage/artist_10.jpg" alt="llorca album" style="width: 40%;">
+                    <div class="hello-card d-none d-xl-flex rounded">
+                        <img class="img-fluid rounded-start" src="/media/homepage/artist_10.jpg" alt="llorca album">
                         <div class="hello-card-content d-flex align-items-center w-100">
-                            <p class="bandTitle">Måneskin</p>
+                            <p>Måneskin</p>
                             <div class="card-play-btn hello-play-btn">
                                 <div class="play-btn-icon"></div>
                             </div>
                         </div>
                     </div>
                     <div class="hello-card d-none d-xxl-flex rounded">
-                        <img class="img-fluid rounded-start" src="/media/homepage/artist_6.jpg" alt="evermore" style="width: 40%;">
+                        <img class="img-fluid rounded-start" src="/media/homepage/artist_6.jpg" alt="evermore">
                         <div class="hello-card-content d-flex align-items-center w-100">
-                            <p class="bandTitle">Evermore</p>
+                            <p>Evermore</p>
                                 <div class="card-play-btn hello-play-btn">
                                 <div class="play-btn-icon"></div>
                             </div>
@@ -867,7 +872,8 @@
                   </h5>
                 </div>
                 <div class="d-flex justify-content-around align-items-center">
-                  <div style="font-size: small;"><output id="rangevalue">0:00</output> <audio src="/media/music.mp3"></audio>
+                  <div style="font-size: small;"><output id="rangevalue">0:00</output> 
+                    <!-- <audio src="#"></audio> -->
                     </div>
                   <div class="slide-container-music px-1" style="margin-top:0px;">
                     <input type="range" min="0" max="100" value="0" class="slider timeline" id="music-track" ontimeupdate="rangevalue.value=value"/>
@@ -967,7 +973,67 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
     integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
     crossorigin="anonymous"></script>
-    <script src="homepage.js"></script>
+    <script>
+
+/*
+Here is some code to use to attach anchor tags:
+For artist
+<a href="./artist.html?artistId=${HERE YOU ADD PROPER CODE FOR YOU DATA}">
+for example newObj.artist.id
+For album
+<a href="./album.html?albumId="${HERE YOU ADD PROPER CODE FOR YOU DATA}">"
+for example newObj.album.id
+*/
+const fetchData = () => {
+  const row = document.querySelector(".hello-content");
+  for (let i = 0; i < row.children.length; i++) {
+    fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=eminem")
+      .then((response) => response.json())
+      .then((data) => {
+        const index = Math.floor(Math.random() * data.data.length);
+        const newObj = data.data[index];
+        const cover = newObj.album.cover;
+        const albumID = newObj.album.id
+        const artistID = newObj.artist.id
+        const helloCard = document.getElementsByClassName("hello-card");
+        helloCard[i].firstElementChild.src = cover;
+        helloCard[i].querySelector("p").innerText = newObj.album.title;
+        const urlAlbum =  `./album.html?albumId=${albumID}`
+        const urlArtist =  `./artist.html?artistId=${artistID}`
+        const modal = document.querySelector(".modal-body");
+        const title = document.createElement("p");
+        title.innerText = newObj.title;
+        modal.append(title);
+        addListener(helloCard[i].firstElementChild, urlAlbum)
+        addListener(helloCard[i].querySelector(".card-play-btn"), urlArtist)
+      })
+      .catch((err) => console.log(err));
+  }
+};
+const addListener = (element, url) => {
+        element.addEventListener("click", ()=>{
+        helloCardInnerHTML = element.innerHTML
+        window.open(url, "_self");
+    })
+}
+const countUnique = () => {
+  const result = [];
+  let count = 0;
+  const modal = document.querySelector(".modal-body");
+  for (let i = 0; i < modal.children.length; i++) {
+    const title = modal.children[i].innerText;
+    if (result.includes(title)) {
+      continue;
+    } else {
+      result.push(title);
+      count++;
+    }
+  }
+  alert(`There are ${count} unique songs displaying.`);
+};
+
+fetchData();
+    </script>
 </body>
 
 </html>
